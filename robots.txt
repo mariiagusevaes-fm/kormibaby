@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /cgi-bin/
+
+Sitemap: https://kormybaby.ru/sitemap.xml
+Host: kormybaby.ru

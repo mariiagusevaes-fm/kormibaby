@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/images/logo.png" sizes="48x48" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Страница не найдена · Кормилица</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+  <link href="https://fonts.bunny.net/css?family=lora:400,500,600,700|nunito:400,500,600,700,800&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --mint:#4A9B7F;--mint-light:#EBF7F2;--mint-pale:#F4FAF7;--mint-dark:#2D6B58;
+      --coral:#E8724A;--coral-dark:#CC5A35;
+      --white:#FFFFFF;--cream:#FAFAF8;
+      --ink:#1C2B25;--ink2:#2D4A3E;--muted:#6B8F82;
+      --border:#E2EDE8;--border2:#C8DDD6;
+      --r:16px;--rsm:10px;
+      --shadow:0 4px 20px rgba(74,155,127,0.10);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px;min-height:100vh;display:flex;flex-direction:column}
+
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .hd{max-width:1280px;margin:0 auto;padding:0 28px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:11px;text-decoration:none!important}
+    .logo img{width:48px;height:48px;object-fit:contain;flex-shrink:0}
+    .logo-copy{display:flex;flex-direction:column;line-height:1.15}
+    .logo-name{font-family:'Lora',serif;font-size:18px;font-weight:600;color:#4A9B7F!important}
+    .logo-tag{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+    .nav{display:flex;gap:18px;align-items:center;flex-shrink:0}
+    .nav a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink2);transition:color .2s;white-space:nowrap}
+    .nav a:hover{color:var(--mint)}
+    .hd-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .hd-phone{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+    .hd-cta{background:var(--coral);color:#fff!important;border:none;border-radius:var(--rsm);padding:9px 18px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;text-decoration:none!important;transition:background .2s;white-space:nowrap;display:inline-block}
+    .hd-cta:hover{background:var(--coral-dark)}
+    .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;flex-shrink:0}
+    .burger span{display:block;width:22px;height:2px;background:var(--mint);border-radius:2px}
+    .mob-nav{display:none;position:fixed;top:76px;left:0;right:0;z-index:299;background:var(--white);border-bottom:1px solid var(--border);flex-direction:column;padding:10px 0 16px}
+    .mob-nav.open{display:flex}
+    .mob-nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);padding:11px 28px;border-bottom:1px solid var(--border)}
+    .m-cta{margin:12px 28px 0;text-align:center;background:var(--coral);color:#fff!important;border-radius:var(--rsm);padding:13px;font-weight:800;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-size:15px;text-decoration:none;display:block}
+
+    /* 404 HERO */
+    .err-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 40px 60px;text-align:center}
+    .err-inner{max-width:600px;width:100%}
+    .err-num{font-family:'Lora',serif;font-size:clamp(80px,18vw,140px);font-weight:700;color:var(--mint-light);line-height:1;margin-bottom:0;display:block;letter-spacing:-4px}
+    .err-ico{font-size:52px;margin:-20px 0 16px;display:block}
+    .err-ttl{font-family:'Lora',serif;font-size:clamp(22px,4vw,32px);font-weight:500;color:var(--ink);margin-bottom:12px;line-height:1.3}
+    .err-desc{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
+
+    /* ТЕЛЕФОНЫ */
+    .err-phones{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+    .err-phone{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;border-radius:var(--rsm);padding:13px 24px;font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;text-decoration:none;transition:background .2s}
+    .err-phone:hover{background:var(--coral-dark)}
+    .err-phone-alt{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--ink);border:1.5px solid var(--border2);border-radius:var(--rsm);padding:12px 22px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;text-decoration:none;transition:border-color .2s}
+    .err-phone-alt:hover{border-color:var(--mint);color:var(--mint)}
+
+    /* БЫСТРЫЕ ССЫЛКИ */
+    .err-links-ttl{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+    .err-links{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;text-align:left;max-width:560px;margin:0 auto}
+    .err-link{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 16px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .15s;display:flex;align-items:center;gap:10px}
+    .err-link:hover{border-color:var(--mint);transform:translateY(-2px)}
+    .err-link-ico{font-size:20px;flex-shrink:0}
+    .err-link-body{display:flex;flex-direction:column;line-height:1.3}
+    .err-link-name{font-size:14px;font-weight:700;color:var(--ink)}
+    .err-link-desc{font-size:11px;color:var(--muted);margin-top:2px}
+
+    /* FOOTER */
+    footer{background:#121A15;padding:28px 40px}
+    .ft-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .ft-copy{font-size:11px;color:rgba(255,255,255,.24)}
+    .ft-copy a{color:rgba(255,255,255,.22);text-decoration:none}
+
+    .float-msg{position:fixed;bottom:24px;right:24px;z-index:500;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+    .float-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.20);transition:transform .2s}
+    .float-btn:hover{transform:scale(1.12)}
+    .float-wa{background:#25D366}
+    .float-tg{background:#2AABEE}
+    .float-max{background:#0077FF}
+
+    @media(max-width:900px){
+      .nav,.hd-right{display:none}
+      .burger{display:flex}
+    }
+    @media(max-width:768px){
+      .hd{padding:0 16px;height:64px}
+      .mob-nav{top:64px}
+      .err-wrap{padding:100px 20px 48px}
+      .err-phones{flex-direction:column;align-items:center}
+      footer{padding:24px 20px}
+      .float-msg{bottom:16px;right:14px}
+      .logo-tag{display:none}
+    }
+    @media(max-width:480px){
+      .hd{padding:0 14px}
+      .err-links{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:375px){
+      .hd{height:60px}
+      .mob-nav{top:60px}
+      .err-links{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hd">
+    <a href="/" class="logo" aria-label="Кормилица — главная">
+      <img src="/images/logo.webp" alt="Кормилица" width="48" height="48" />
+      <div class="logo-copy">
+        <span class="logo-name">Кормилица</span>
+        <span class="logo-tag">Центр помощи кормящим мамам</span>
+      </div>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="/">Главная</a>
+      <a href="/#services">Помощь</a>
+      <a href="/tseny">Цены</a>
+      <a href="/specialist_po_grudnomu_vskarmlivaniyu">Специалисты</a>
+      <a href="/#articles">Статьи</a>
+    </nav>
+    <div class="hd-right">
+      <a href="tel:+74957293738" class="hd-phone">+7 (495) 729-37-38</a>
+      <a href="tel:+74957293738" class="hd-cta">Позвонить</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mob-nav" id="mobNav">
+  <a href="/">Главная</a>
+  <a href="/#services">Помощь</a>
+  <a href="/tseny">Цены</a>
+  <a href="/specialist_po_grudnomu_vskarmlivaniyu">Специалисты</a>
+  <a href="/#articles">Статьи</a>
+  <a href="tel:+74957293738" class="m-cta">📞 Позвонить бесплатно</a>
+</div>
+
+<!-- 404 -->
+<main id="main-content">
+  <div class="err-wrap">
+    <div class="err-inner">
+      <span class="err-num">404</span>
+      <span class="err-ico">🤱</span>
+      <h1 class="err-ttl">Страница не найдена</h1>
+      <p class="err-desc">Возможно, адрес изменился или страница была удалена. Но мы здесь — позвоните, и операторы центра бесплатно ответят на любой вопрос по грудному вскармливанию.</p>
+
+      <div class="err-phones">
+        <a href="tel:+74957293738" class="err-phone">📞 +7 (495) 729-37-38</a>
+        <a href="tel:+79857760396" class="err-phone-alt">+7 (985) 776-03-96</a>
+      </div>
+
+      <div class="err-links-ttl">Или перейдите в нужный раздел</div>
+      <div class="err-links">
+        <a href="/rastsezhivaem-laktostaz-mastit-kormyashih" class="err-link">
+          <span class="err-link-ico">🤱</span>
+          <span class="err-link-body"><span class="err-link-name">Расцеживание</span><span class="err-link-desc">Лактостаз, мастит</span></span>
+        </a>
+        <a href="/nauchitsya-pravilno-prikladyvat-k-grudi" class="err-link">
+          <span class="err-link-ico">👶</span>
+          <span class="err-link-body"><span class="err-link-name">Прикладывание</span><span class="err-link-desc">Боль, захват, позы</span></span>
+        </a>
+        <a href="/malo-moloka" class="err-link">
+          <span class="err-link-ico">💧</span>
+          <span class="err-link-body"><span class="err-link-name">Мало молока</span><span class="err-link-desc">Как увеличить</span></span>
+        </a>
+        <a href="/laktostaz_ili_mastit" class="err-link">
+          <span class="err-link-ico">🌡️</span>
+          <span class="err-link-body"><span class="err-link-name">Лактостаз</span><span class="err-link-desc">Уплотнение, боль</span></span>
+        </a>
+        <a href="/treshiny-soskov" class="err-link">
+          <span class="err-link-ico">🩹</span>
+          <span class="err-link-body"><span class="err-link-name">Трещины сосков</span><span class="err-link-desc">Лечение, мази</span></span>
+        </a>
+        <a href="/zavershenie-kormlenia" class="err-link">
+          <span class="err-link-ico">🌿</span>
+          <span class="err-link-body"><span class="err-link-name">Завершение ГВ</span><span class="err-link-desc">Без лактостаза</span></span>
+        </a>
+        <a href="/koliki-u-novorozhdennogo" class="err-link">
+          <span class="err-link-ico">🍼</span>
+          <span class="err-link-body"><span class="err-link-name">Колики</span><span class="err-link-desc">Что делать маме</span></span>
+        </a>
+        <a href="/tseny" class="err-link">
+          <span class="err-link-ico">📋</span>
+          <span class="err-link-body"><span class="err-link-name">Цены</span><span class="err-link-desc">Выезд, онлайн</span></span>
+        </a>
+        <a href="/" class="err-link" style="border-color:var(--mint)">
+          <span class="err-link-ico">🏠</span>
+          <span class="err-link-body"><span class="err-link-name">Главная</span><span class="err-link-desc">Все услуги центра</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-bottom">
+    <div class="ft-copy">© Кормилица 2006 — 2026 · <a href="/privacy">Политика конфиденциальности</a></div>
+    <div class="ft-copy">ООО «ММД», Лицензия ЛО-50-01-009051 от 03.10.2017</div>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="float-msg" aria-label="Написать нам">
+  <a href="https://wa.me/79524000210" class="float-btn float-wa" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <a href="https://max.ru/u/f9LHodD0cOJAW0NTK9Tg5C3v_Ldy1TTMXUnQrGsZtug5_XLWcCb8lDuEmTU" class="float-btn float-max" target="_blank" rel="noopener" aria-label="MAX" title="MAX"><span style="font-size:12px;font-weight:900;color:#fff;font-family:Arial,sans-serif;letter-spacing:-0.5px">MAX</span></a>
+  <a href="https://t.me/ElenaWorkingaccout" class="float-btn float-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=86877046','ym');
+  ym(86877046,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});
+</script>
+<noscript><div style="position:absolute;left:-9999px;"><img src="https://mc.yandex.ru/watch/86877046" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobNav = document.getElementById('mobNav');
+  burger.addEventListener('click', () => {
+    const isOpen = mobNav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#mobNav') && !e.target.closest('#burger')) mobNav.classList.remove('open');
+  });
+</script>
+</body>
+</html>

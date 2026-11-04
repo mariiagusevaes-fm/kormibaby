@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/images/logo.png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Политика конфиденциальности — Кормилица и МожноЛи</title>
+  <meta name="description" content="Политика конфиденциальности сайта kormybaby.ru, центра Кормилица и приложения МожноЛи. ООО «ММД», Москва." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://kormybaby.ru/privacy" />
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+  <link href="https://fonts.bunny.net/css?family=lora:400,500,600|nunito:400,500,600,700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --mint:#4A9B7F;--mint-light:#EBF7F2;--mint-pale:#F4FAF7;--mint-dark:#2D6B58;
+      --coral:#E8724A;
+      --white:#FFFFFF;--off-white:#FAFAF8;
+      --ink:#1C2B25;--muted:#6B8F82;
+      --border:#E2EDE8;--r:16px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',sans-serif;background:var(--off-white);color:var(--ink);line-height:1.75;font-size:16px}
+
+    /* HEADER */
+    header{background:#fff;border-bottom:1px solid var(--border);padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.04)}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo img{width:44px;height:44px;object-fit:contain}
+    .logo-text{display:flex;flex-direction:column;line-height:1.15}
+    .logo-name{font-family:'Lora',serif;font-size:17px;font-weight:600;color:var(--mint)}
+    .logo-tag{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+    .back-link{font-size:14px;color:var(--mint);text-decoration:none;font-weight:600}
+    .back-link:hover{text-decoration:underline}
+
+    /* PAGE */
+    .page-wrap{max-width:800px;margin:0 auto;padding:52px 32px 80px}
+
+    /* SWITCHER — табы для двух продуктов */
+    .product-tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+    .product-tab{display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:var(--r);border:2px solid var(--border);background:var(--white);font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;text-decoration:none;transition:all .2s}
+    .product-tab:hover{border-color:var(--mint);color:var(--mint)}
+    .product-tab.active{border-color:var(--mint);background:var(--mint);color:#fff}
+    .product-tab .tab-icon{font-size:18px}
+
+    /* СЕКЦИИ продуктов */
+    .product-section{display:none}
+    .product-section.active{display:block}
+
+    /* PAGE HEADER */
+    .page-header{margin-bottom:36px}
+    .product-chip{display:inline-flex;align-items:center;gap:8px;background:var(--mint-light);border:1px solid var(--border);border-radius:32px;padding:5px 14px;font-size:12px;font-weight:700;color:var(--mint-dark);margin-bottom:14px;letter-spacing:.04em;text-transform:uppercase}
+    .page-header h1{font-family:'Lora',serif;font-size:clamp(26px,4vw,38px);font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.2}
+    .page-meta{font-size:13px;color:var(--muted);display:flex;gap:20px;flex-wrap:wrap}
+
+    /* CONTENT */
+    .policy-card{background:var(--white);border-radius:var(--r);border:1.5px solid var(--border);padding:32px;margin-bottom:16px}
+    .policy-card h2{font-family:'Lora',serif;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--mint-light)}
+    .policy-card p{font-size:15px;color:var(--ink);line-height:1.8;margin-bottom:12px}
+    .policy-card p:last-child{margin-bottom:0}
+    .policy-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin:12px 0}
+    .policy-card li{font-size:15px;color:var(--ink);line-height:1.7;padding-left:20px;position:relative}
+    .policy-card li::before{content:'•';color:var(--mint);position:absolute;left:0;font-size:18px;line-height:1.5}
+    .policy-card a{color:var(--mint);text-decoration:none}
+    .policy-card a:hover{text-decoration:underline}
+    .policy-card strong{font-weight:700}
+
+    .highlight-box{background:var(--mint-pale);border-left:4px solid var(--mint);border-radius:0 var(--r) var(--r) 0;padding:16px 20px;margin:16px 0}
+    .highlight-box p{margin:0;font-size:15px}
+
+    .no-collect{background:#F0FAF5;border:1.5px solid #B8E0D0;border-radius:var(--r);padding:20px 24px;margin:14px 0}
+    .no-collect p{margin:0;font-size:15px;color:var(--ink)}
+
+    /* FOOTER */
+    footer{background:#1A2E28;padding:28px 32px;text-align:center}
+    footer p{font-size:13px;color:rgba(255,255,255,.4)}
+    footer a{color:rgba(255,255,255,.6);text-decoration:none}
+    footer a:hover{color:#fff}
+
+    @media(max-width:600px){
+      .page-wrap{padding:28px 20px 56px}
+      .policy-card{padding:22px}
+      header{padding:0 20px}
+      .product-tab{padding:9px 14px;font-size:13px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo" aria-label="Кормилица — на главную">
+    <img src="/images/logo.png" alt="Кормилица" width="44" height="44" />
+    <div class="logo-text">
+      <span class="logo-name">Кормилица</span>
+      <span class="logo-tag">Центр помощи кормящим мамам</span>
+    </div>
+  </a>
+  <a href="/" class="back-link">← На главную</a>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-header">
+    <h1>Политика конфиденциальности</h1>
+    <p class="page-meta" style="margin-top:8px">
+      <span>ООО «ММД» (Кормилица + МожноЛи)</span>
+      <span>Последнее обновление: 28 июня 2026 г.</span>
+    </p>
+  </div>
+
+  <!-- ТАБЫ -->
+  <div class="product-tabs" role="tablist" aria-label="Выберите продукт">
+    <button class="product-tab active" role="tab" aria-selected="true"  aria-controls="tab-kormilica" id="btn-kormilica" onclick="showTab('kormilica')">
+      <span class="tab-icon">🤱</span> Сайт Кормилица
+    </button>
+    <button class="product-tab" role="tab" aria-selected="false" aria-controls="tab-mojnoli" id="btn-mojnoli" onclick="showTab('mojnoli')">
+      <span class="tab-icon">🌿</span> Приложение МожноЛи
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       КОРМИЛИЦА
+  ═══════════════════════════════════════════════ -->
+  <div class="product-section active" id="tab-kormilica" role="tabpanel" aria-labelledby="btn-kormilica">
+
+    <div class="product-chip">🤱 kormybaby.ru · Центр «Кормилица»</div>
+
+    <div class="policy-card">
+      <h2>1. Общие положения</h2>
+      <p>Настоящая Политика конфиденциальности описывает, как сайт <strong>kormybaby.ru</strong> и центр помощи кормящим мамам <strong>«Кормилица»</strong> собирают, хранят и используют данные пользователей.</p>
+      <p>Оператор данных: <strong>ООО «ММД»</strong>, Москва, Хорошевское шоссе, 12а. Лицензия ЛО-50-01-009051 от 03.10.2017.</p>
+      <div class="highlight-box">
+        <p><strong>Кратко:</strong> мы собираем только данные, которые вы сами нам передаёте при заполнении форм — имя и номер телефона. Никаких данных без вашего ведома не собирается.</p>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <h2>2. Какие данные мы собираем</h2>
+      <p>При заполнении форм обратной связи на сайте вы можете передать нам:</p>
+      <ul>
+        <li><strong>Имя</strong> — для обращения к вам при обратном звонке</li>
+        <li><strong>Номер телефона</strong> — для связи с вами</li>
+        <li><strong>Описание ситуации</strong> — если заполнили поле «Что происходит» (необязательно)</li>
+      </ul>
+      <p>Эти данные используются исключительно для обратного звонка или ответа на ваш вопрос. Мы не передаём их третьим лицам, не используем для рассылок без вашего согласия.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>3. Аналитика и cookies</h2>
+      <p>Сайт использует <strong>Яндекс.Метрику</strong> для анализа посещаемости: какие страницы популярны, с каких устройств заходят пользователи, как долго читают материалы. Данные анонимизированы и не позволяют идентифицировать конкретного пользователя без дополнительных действий.</p>
+      <p>Яндекс.Метрика использует cookies. Вы можете отключить cookies в настройках браузера — сайт продолжит работать корректно.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>4. Как мы храним данные</h2>
+      <p>Данные форм обратной связи (имя и телефон) хранятся в защищённой системе и доступны только сотрудникам центра «Кормилица». Срок хранения — до завершения оказания услуги или по вашему запросу об удалении.</p>
+      <p>Мы принимаем технические и организационные меры для защиты ваших данных от несанкционированного доступа.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>5. Мессенджеры (WhatsApp, Telegram)</h2>
+      <p>На сайте есть кнопки для связи через WhatsApp и Telegram. При нажатии вы переходите в соответствующее приложение — переписка хранится на платформах этих сервисов в соответствии с их собственными политиками конфиденциальности.</p>
+      <p>Мы не записываем и не храним содержимое переписки в мессенджерах за пределами этих платформ.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>6. Ваши права</h2>
+      <p>Вы имеете право:</p>
+      <ul>
+        <li>Запросить, какие данные о вас мы храним</li>
+        <li>Потребовать удаления ваших данных</li>
+        <li>Отозвать согласие на обработку персональных данных</li>
+        <li>Подать жалобу в Роскомнадзор, если считаете, что ваши права нарушены</li>
+      </ul>
+      <p>Для реализации прав обращайтесь: <a href="mailto:info@kormybaby.ru">info@kormybaby.ru</a></p>
+    </div>
+
+    <div class="policy-card">
+      <h2>7. Медицинский отказ от ответственности</h2>
+      <p>Информация на сайте kormybaby.ru носит ознакомительный характер и не заменяет консультацию врача. Центр «Кормилица» работает на основании медицинской лицензии и несёт ответственность в рамках оказываемых услуг.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>8. Изменения в политике</h2>
+      <p>Мы можем обновлять эту политику. Актуальная версия всегда доступна на странице <a href="https://kormybaby.ru/privacy">kormybaby.ru/privacy</a>. Дата последнего обновления указана в начале документа.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>9. Контакты</h2>
+      <p>По вопросам конфиденциальности данных сайта Кормилица:</p>
+      <ul>
+        <li>Email: <a href="mailto:info@kormybaby.ru">info@kormybaby.ru</a></li>
+        <li>Телефон: <a href="tel:+74957293738">+7 (495) 729-37-38</a></li>
+        <li>Адрес: Москва, Хорошевское шоссе, 12а</li>
+      </ul>
+    </div>
+
+  </div><!-- /tab-kormilica -->
+
+  <!-- ═══════════════════════════════════════════════
+       МОЖНОЛИ
+  ═══════════════════════════════════════════════ -->
+  <div class="product-section" id="tab-mojnoli" role="tabpanel" aria-labelledby="btn-mojnoli">
+
+    <div class="product-chip">🌿 МожноЛи · iOS App · mojno-li.ru</div>
+
+    <div class="policy-card">
+      <h2>1. Общие положения</h2>
+      <p>Настоящая Политика конфиденциальности описывает, какие данные собирает (и не собирает) приложение <strong>МожноЛи</strong> при его использовании на устройствах iOS и через веб-версию <a href="https://mojno-li.ru" target="_blank" rel="noopener">mojno-li.ru</a>.</p>
+      <p>Приложение разработано и поддерживается <strong>ООО «ММД»</strong> (Центр помощи кормящим мамам «Кормилица»), Москва, Россия.</p>
+      <div class="no-collect">
+        <p>✅ <strong>Приложение МожноЛи не требует регистрации, не запрашивает личные данные и не передаёт никакую информацию о пользователях третьим лицам.</strong></p>
+      </div>
+    </div>
+
+    <div class="policy-card">
+      <h2>2. Какие данные мы НЕ собираем</h2>
+      <p>Приложение МожноЛи не собирает и не хранит:</p>
+      <ul>
+        <li>Имя, фамилию, email или номер телефона</li>
+        <li>Данные о местоположении</li>
+        <li>Медицинские данные, диагнозы, историю болезни</li>
+        <li>Поисковые запросы (история хранится только локально на устройстве)</li>
+        <li>Платёжные данные (приложение полностью бесплатно)</li>
+        <li>Контакты из адресной книги</li>
+        <li>Данные камеры или микрофона</li>
+      </ul>
+      <p>Регистрация и создание аккаунта не требуются.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>3. Анонимная статистика использования</h2>
+      <p>Для улучшения приложения мы можем собирать анонимную агрегированную статистику: какие разделы открываются чаще всего, общее количество запросов, технические ошибки. Эти данные <strong>не позволяют идентифицировать конкретного пользователя</strong>.</p>
+      <p>Веб-версия mojno-li.ru использует счётчик Яндекс.Метрика для анализа посещаемости в анонимном режиме.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>4. Данные хранятся только на вашем устройстве</h2>
+      <p>Следующие данные сохраняются <strong>исключительно локально</strong> на вашем устройстве и никогда не передаются на наши серверы:</p>
+      <ul>
+        <li>История недавних поисковых запросов</li>
+        <li>Сохранённые позиции (избранное)</li>
+        <li>Выбранный режим (беременность / грудное вскармливание)</li>
+      </ul>
+      <p>Вы можете удалить эти данные через функцию «Очистить историю» в приложении или удалив приложение с устройства.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>5. Связь через Telegram</h2>
+      <p>В приложении есть возможность задать вопрос через Telegram. При нажатии кнопки открывается приложение Telegram с готовым сообщением. Переписка ведётся и хранится в Telegram в соответствии с <a href="https://telegram.org/privacy" target="_blank" rel="noopener">политикой конфиденциальности Telegram</a>.</p>
+      <p>Мы не сохраняем содержимое переписки за пределами платформы Telegram.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>6. Медицинский отказ от ответственности</h2>
+      <p>Информация в приложении МожноЛи носит <strong>справочный характер</strong> и не является медицинской консультацией. Перед применением любого препарата или продукта проконсультируйтесь с врачом.</p>
+      <p>Приложение не собирает и не хранит медицинские данные пользователей.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>7. Дети</h2>
+      <p>Приложение МожноЛи предназначено для беременных женщин и кормящих мам. Мы не собираем данные лиц младше 18 лет намеренно. Если вам стало известно, что ребёнок предоставил нам личные данные — свяжитесь с нами для их удаления.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>8. Изменения в политике</h2>
+      <p>Мы оставляем за собой право обновлять настоящую политику. При существенных изменениях уведомим пользователей через обновление приложения в App Store. Актуальная версия всегда доступна на <a href="https://kormybaby.ru/privacy">kormybaby.ru/privacy</a>.</p>
+    </div>
+
+    <div class="policy-card">
+      <h2>9. Контакты</h2>
+      <p>По вопросам конфиденциальности приложения МожноЛи:</p>
+      <ul>
+        <li>Email: <a href="mailto:info@kormybaby.ru">info@kormybaby.ru</a></li>
+        <li>Telegram: <a href="https://t.me/infoaccount1" target="_blank" rel="noopener">@infoaccount1</a></li>
+        <li>Сайт приложения: <a href="https://mojno-li.ru" target="_blank" rel="noopener">mojno-li.ru</a></li>
+        <li>Адрес: ООО «ММД», Москва, Хорошевское шоссе, 12а</li>
+      </ul>
+    </div>
+
+  </div><!-- /tab-mojnoli -->
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <p>© 2026 ООО «ММД» · <a href="https://kormybaby.ru">Кормилица</a> · <a href="https://mojno-li.ru">МожноЛи</a> · Лицензия ЛО-50-01-009051</p>
+</footer>
+
+<script>
+  function showTab(id) {
+    // Скрываем все секции и убираем активный таб
+    document.querySelectorAll('.product-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.product-tab').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    // Показываем нужную секцию
+    document.getElementById('tab-' + id).classList.add('active');
+    const btn = document.getElementById('btn-' + id);
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  // Если в URL есть #mojnoli — сразу открываем вкладку приложения
+  if (window.location.hash === '#mojnoli') showTab('mojnoli');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=86877046','ym');
+  ym(86877046,'init',{ssr:true,webvisor:false,clickmap:false,accurateTrackBounce:true,trackLinks:false});
+</script>
+<noscript><div style="position:absolute;left:-9999px;"><img src="https://mc.yandex.ru/watch/86877046" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
