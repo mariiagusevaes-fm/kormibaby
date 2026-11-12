@@ -237,8 +237,8 @@
     .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
     .spec-card{background:var(--white);border-radius:var(--rl);border:2px solid var(--border-mid);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 20px rgba(61,154,122,0.09);transition:transform .22s,box-shadow .22s}
     .spec-card:hover{transform:translateY(-7px);box-shadow:0 16px 48px rgba(61,154,122,0.18)}
-    .spec-photo{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,var(--a4) 0%,var(--a3) 100%);overflow:hidden;position:relative;max-height:240px}
-    .spec-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+    .spec-photo{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--a4) 0%,var(--a3) 100%);overflow:hidden;position:relative}
+    .spec-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
     .spec-body{padding:20px;flex:1;display:flex;flex-direction:column}
     .spec-name{font-family:'Lora',serif;font-size:18px;font-weight:500;color:var(--ink);margin-bottom:4px}
     .spec-role{font-size:11px;font-weight:800;color:var(--mint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
@@ -508,7 +508,6 @@
     }
     /* Маленький телефон: 480px */
     @media(max-width:480px){
-      .spec-photo{aspect-ratio:1/1}
       .hero h1{font-size:clamp(26px,8vw,38px)}
       .hero-btns{flex-direction:column;align-items:stretch}
       .btn-white,.btn-ghost{justify-content:center;width:100%}
@@ -952,7 +951,7 @@
     <div class="spec-grid">
 
       <div class="spec-card" itemscope itemtype="https://schema.org/Person">
-        <div class="spec-photo"><img src="/images/nazarova.webp" alt="Мария Назарова — руководитель центра Кормилица" width="400" height="267" loading="lazy" itemprop="image"></div>
+        <div class="spec-photo"><img src="/images/nazarova.webp" alt="Мария Назарова — руководитель центра Кормилица" width="400" height="533" loading="lazy" itemprop="image"></div>
         <div class="spec-body">
           <div class="spec-name" itemprop="name">Мария Назарова</div>
           <div class="spec-role" itemprop="jobTitle">Руководитель центра</div>
@@ -965,7 +964,7 @@
       </div>
 
       <div class="spec-card" itemscope itemtype="https://schema.org/Person">
-        <div class="spec-photo"><img src="/images/drozdova.webp" alt="Оксана Дроздова — специалист по ГВ Москва на дом" width="400" height="267" loading="lazy" itemprop="image"></div>
+        <div class="spec-photo"><img src="/images/drozdova.webp" alt="Оксана Дроздова — специалист по ГВ Москва на дом" width="400" height="533" loading="lazy" itemprop="image"></div>
         <div class="spec-body">
           <div class="spec-name" itemprop="name">Оксана Дроздова</div>
           <div class="spec-role" itemprop="jobTitle">Ведущий специалист по выездам</div>
@@ -977,7 +976,7 @@
       </div>
 
       <div class="spec-card" itemscope itemtype="https://schema.org/Person">
-        <div class="spec-photo"><img src="/images/tretyakova.webp" alt="Лариса Третьякова — специалист по ГВ высшей категории" width="400" height="267" loading="lazy" itemprop="image"></div>
+        <div class="spec-photo"><img src="/images/tretyakova.webp" alt="Лариса Третьякова — специалист по ГВ высшей категории" width="400" height="533" loading="lazy" itemprop="image"></div>
         <div class="spec-body">
           <div class="spec-name" itemprop="name">Лариса Третьякова</div>
           <div class="spec-role" itemprop="jobTitle">Специалист высшей категории</div>
@@ -989,7 +988,7 @@
       </div>
 
       <div class="spec-card" itemscope itemtype="https://schema.org/Person">
-        <div class="spec-photo"><img src="/images/vlasova.webp" alt="Оксана Власова — консультант по грудному вскармливанию" width="400" height="267" loading="lazy" itemprop="image"></div>
+        <div class="spec-photo"><img src="/images/vlasova.webp" alt="Оксана Власова — консультант по грудному вскармливанию" width="400" height="533" loading="lazy" itemprop="image"></div>
         <div class="spec-body">
           <div class="spec-name" itemprop="name">Оксана Власова</div>
           <div class="spec-role" itemprop="jobTitle">Специалист высшей категории</div>
