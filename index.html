@@ -444,6 +444,7 @@
       .hd-phone{display:none}
       .app-desc{max-width:100%}
       .svc-grid{grid-template-columns:repeat(2,1fr)}
+      .svc-grid>.svc-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc((100% - 22px)/2)}
       .trust-grid{grid-template-columns:repeat(2,1fr)}
       .spec-grid{grid-template-columns:repeat(2,1fr)}
     }
@@ -459,6 +460,7 @@
     @media(max-width:768px){
       .hero-blob,.hero-blob2{display:none}
       .svc-grid{grid-template-columns:1fr}
+      .svc-grid>.svc-card:last-child{width:auto}
       .trust-grid{grid-template-columns:1fr}
       .spec-grid{grid-template-columns:1fr}
       .art-grid{grid-template-columns:1fr}
@@ -761,6 +763,28 @@
           <div class="svc-ic">🤲</div>
           <div class="svc-title">Массаж при застое молока</div>
           <p class="svc-desc">Когда массаж груди помогает, а когда вреден при лактостазе — покажем безопасную технику на месте.</p>
+          <div class="svc-price">от 9 000 ₽</div>
+          <span class="svc-arrow" aria-hidden="true">Подробнее →</span>
+        </div>
+      </a>
+
+      <a href="/treshiny-soskov" class="svc-card">
+        <div class="svc-photo"><img src="/images/svc-treshiny.webp" alt="Трещины и боль сосков при кормлении" onerror="this.style.display='none'" width="480" height="270" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-ic">💧</div>
+          <div class="svc-title">Трещины и боль сосков</div>
+          <p class="svc-desc">Соски потрескались, больно кормить — поможем остановить боль и наладить кормление без травм.</p>
+          <div class="svc-price">от 9 000 ₽</div>
+          <span class="svc-arrow" aria-hidden="true">Подробнее →</span>
+        </div>
+      </a>
+
+      <a href="/uplotnieniie_v_ghrudi" class="svc-card">
+        <div class="svc-photo"><img src="/images/svc-uplotnenie.webp" alt="Уплотнение и шишка в груди при кормлении" onerror="this.style.display='none'" width="480" height="270" loading="lazy"></div>
+        <div class="svc-body">
+          <div class="svc-ic">🔍</div>
+          <div class="svc-title">Уплотнение в груди</div>
+          <p class="svc-desc">Нащупали уплотнение или шишку — проверим, не лактостаз ли это, и поможем на месте, если нужно.</p>
           <div class="svc-price">от 9 000 ₽</div>
           <span class="svc-arrow" aria-hidden="true">Подробнее →</span>
         </div>
