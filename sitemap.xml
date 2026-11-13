@@ -193,6 +193,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kormybaby.ru/gv-strogino</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kormybaby.ru/gv-mytishchi</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
