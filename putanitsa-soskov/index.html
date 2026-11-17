@@ -30,7 +30,7 @@
   {"@context":"https://schema.org","@type":"MedicalWebPage",
    "name":"Путаница сосков — что делать, если малыш отказывается от груди после бутылочки",
    "url":"https://kormybaby.ru/putanitsa-soskov",
-   "datePublished":"2026-11-16","dateModified":"2026-11-16",
+   "datePublished":"2026-11-16","dateModified":"2026-11-17",
    "author":{"@type":"Person","name":"Мария Назарова","jobTitle":"Специалист по грудному вскармливанию","worksFor":{"@type":"Organization","name":"Кормилица"},"alumniOf":"Первый МГМУ им. Сеченова"},
    "publisher":{"@type":"Organization","name":"Кормилица","url":"https://kormybaby.ru"},
    "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
@@ -276,6 +276,22 @@
     .note-box{background:var(--mint-pale);border-left:4px solid var(--mint);border-radius:0 var(--r) var(--r) 0;padding:14px 18px;margin:18px 0;font-size:14px;color:var(--ink);line-height:1.7;box-sizing:border-box;width:100%}
     .note-lnk{color:var(--mint);font-weight:600}
 
+    .compare-wrap{overflow-x:auto;margin:18px 0}
+    .compare-table{width:100%;border-collapse:collapse;font-size:14px}
+    .compare-table th{background:var(--mint-dark);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+    .compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);line-height:1.5;vertical-align:top}
+    .compare-table tr:nth-child(even) td{background:var(--mint-pale)}
+
+    .timeline{display:flex;flex-direction:column;gap:0;margin:18px 0}
+    .tl-item{display:flex;gap:16px;position:relative;padding-bottom:20px}
+    .tl-item:last-child{padding-bottom:0}
+    .tl-item:not(:last-child)::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:2px;background:var(--mint-light)}
+    .tl-dot{width:40px;height:40px;border-radius:50%;background:var(--mint);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;text-align:center;line-height:1.2}
+    .tl-body{flex:1;padding-top:8px}
+    .tl-title{font-family:'Lora',serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+    .tl-desc{font-size:13px;color:var(--muted);line-height:1.6}
+    .tl-warn{font-size:12px;color:var(--coral-dark);font-weight:600;margin-top:4px}
+
     @media(max-width:1024px){
       .hero-grid,.article-wrap{grid-template-columns:1fr}
       .toc-card{position:static}
@@ -432,7 +448,7 @@
       </div>
       <div class="meta-row">
         <span class="meta-chip">📅 Ноябрь 2026</span>
-        <span class="meta-chip">⏱️ 7 минут чтения</span>
+        <span class="meta-chip">⏱️ 9 минут чтения</span>
       </div>
     </div>
     <div class="toc-card" aria-label="Содержание статьи">
@@ -441,6 +457,8 @@
         <li><a href="#prichiny">Что такое путаница сосков</a></li>
         <li><a href="#priznaki">Признаки путаницы сосков</a></li>
         <li><a href="#chto-delat">Что делать пошагово</a></li>
+        <li><a href="#plan-po-dnyam">План переучивания по дням</a></li>
+        <li><a href="#sns-sistema">Докорм через SNS у груди</a></li>
         <li><a href="#nelzya">Чего нельзя делать</a></li>
         <li><a href="#kogda-zvonit">Когда звонить специалисту</a></li>
         <li><a href="#profilaktika">Как избежать путаницы сосков</a></li>
@@ -461,7 +479,7 @@
 <div class="article-wrap">
   <article class="art-body" itemscope itemtype="https://schema.org/Article">
     <meta itemprop="author" content="Мария Назарова" />
-    <meta itemprop="dateModified" content="2026-11-16" />
+    <meta itemprop="dateModified" content="2026-11-17" />
 
     <!-- ЧТО ТАКОЕ -->
     <div class="art-sec fi" id="prichiny">
@@ -469,6 +487,18 @@
       <p>Путаница сосков — ситуация, когда ребёнок, привыкший сосать бутылочку или пустышку, начинает неправильно захватывать грудь или вовсе от неё отказывается. Дело не в капризе, а в разной технике сосания.</p>
       <p>Из бутылочки молоко течёт почти без усилий: достаточно немного приоткрыть рот и работать щеками. Грудь устроена иначе — нужно широко открыть рот, захватить не только сосок, но и ареолу, и активно работать языком, выдавливая молоко волнообразными движениями. Если малыш привыкает к «лёгкому» способу, грудь начинает казаться ему неудобной, а иногда и вызывает раздражение.</p>
       <p>Пустышка действует немного иначе, но тоже может приводить к путанице. Ребёнок сосёт её не ради еды, а ради успокоения — это так называемое нежевательное, «пустое» сосание. Если такой паттерн закрепляется, малыш переносит его и на грудь: сосёт вяло, без цели добыть молоко, и быстро бросает, не получив ожидаемого результата.</p>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Критерий</th><th>Бутылочка</th><th>Грудь</th></tr></thead>
+          <tbody>
+            <tr><td>Поток молока</td><td>Постоянный, почти без усилий ребёнка</td><td>Начинается только после активной работы языком и ожидания прилива</td></tr>
+            <tr><td>Открытие рта</td><td>Небольшое, на 1–2 см</td><td>Широкое, «как при зевке» — нужно захватить ареолу, а не только сосок</td></tr>
+            <tr><td>Какие мышцы работают</td><td>В основном щёки</td><td>Язык, челюсть и мышцы лица — заметно больше, по наблюдениям консультантов по ГВ</td></tr>
+            <tr><td>Темп сосания</td><td>Можно сосать быстро, без пауз</td><td>Ритмичный, с паузами на глотание и отдых</td></tr>
+            <tr><td>Чему привыкает малыш</td><td>Лёгкому, пассивному сосанию</td><td>Активному, трудоёмкому сосанию</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>Самые частые причины путаницы:</p>
       <ul>
         <li><strong>Раннее введение бутылочки или пустышки</strong> — риск выше, пока лактация не установилась полностью. Многие специалисты советуют быть особенно осторожными первые несколько недель, а по возможности — первые 2–3 месяца</li>
@@ -552,6 +582,53 @@
       </div>
       <div class="art-highlight">
         В большинстве случаев переучивание занимает от 3 до 7 дней при последовательных действиях. Не ждите мгновенного результата с первой попытки.
+      </div>
+    </div>
+
+    <!-- ПЛАН ПО ДНЯМ -->
+    <div class="art-sec fi" id="plan-po-dnyam">
+      <h2>План переучивания по дням — чего ожидать</h2>
+      <p>У каждого ребёнка переучивание идёт по-своему, но есть общая динамика, на которую можно ориентироваться.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">1–2 дн</div>
+          <div class="tl-body">
+            <div class="tl-title">Убираем бутылочку, пробуем грудь без давления</div>
+            <div class="tl-desc">Докорм переходит на ложку, шприц или чашку-поильник. Грудь предлагаем 2–3 раза в день в спокойные моменты, без цели «накормить» — только привыкнуть. Отказ в эти дни — это нормально, не признак неудачи.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">3–4 дн</div>
+          <div class="tl-body">
+            <div class="tl-title">Увеличиваем число попыток</div>
+            <div class="tl-desc">Прикладывание — перед каждым приёмом пищи. Добавляем контакт кожа к коже и каплю сцеженного молока перед грудью. У большинства детей в этот период появляются первые короткие, но результативные захваты.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">5–7 дн</div>
+          <div class="tl-body">
+            <div class="tl-title">Закрепление навыка</div>
+            <div class="tl-desc">Захват становится увереннее и дольше. По мере того как малыш реально наедается у груди, альтернативный докорм постепенно сокращаем.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">&gt;7 дн</div>
+          <div class="tl-body">
+            <div class="tl-title">Прогресса нет</div>
+            <div class="tl-desc">Если за неделю последовательных попыток ребёнок так и не берёт грудь — это повод не продолжать самостоятельно, а <a href="#kogda-zvonit" style="color:var(--mint);font-weight:600">позвать специалиста</a>, который посмотрит технику именно у вас.</div>
+            <div class="tl-warn">Дальше тянуть смысла нет — чем раньше специалист увидит захват, тем быстрее найдётся причина.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SNS -->
+    <div class="art-sec fi" id="sns-sistema">
+      <h2>Что такое система докорма у груди (SNS)</h2>
+      <p>SNS (supplemental nursing system) — это ёмкость с докормом (сцеженным молоком или смесью), от которой к соску подводится тонкая мягкая трубочка. Малыш сосёт грудь как обычно, а докорм поступает прямо туда же, через трубочку рядом с соском.</p>
+      <p>Это удобно именно при путанице сосков: ребёнок получает еду без борьбы и при этом не теряет мотивацию сосать грудь, как случилось бы с бутылочкой. Важно использовать SNS только как временную меру на период переучивания, а не постоянно — обычно специалист по ГВ помогает подобрать систему и научить ей пользоваться на одном визите.</p>
+      <div class="note-box">
+        SNS не обязательна для всех: часть детей переучиваются и без неё, через докорм ложкой или шприцем между прикладываниями. Система особенно полезна, если нужно поддерживать больший объём докорма, не давая при этом бутылочку.
       </div>
     </div>
 
